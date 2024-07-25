@@ -27,8 +27,8 @@ The goal is to have a functional application where the client can interact with 
 1. **Clone the Repository**
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+    https://github.com/Neenu-T/Three-tier-App.git
+    cd Three-tier-App
 
 ## Technologies Used
 
@@ -51,4 +51,4 @@ The goal is to have a functional application where the client can interact with 
 1. **Clone the repository:**
    ```bash
    https://github.com/Neenu-T/Three-tier-App.git
-   cd Three-tier-App" 
+   cd Three-tier-App
