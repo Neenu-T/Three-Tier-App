@@ -1,51 +1,17 @@
-# Node.js
-node_modules/
-npm-debug.log
-package-lock.json
-yarn-error.log
-yarn.lock
+# Python Service
+python-service/venv/
+python-service/__pycache__/
+python-service/*.pyc
+python-service/*.pyo
+python-service/*.pyd
+python-service/.env
 
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.sqlite3
+# Node.js Service
+node-service/node_modules/
+node-service/npm-debug.log
+node-service/.env
 
-# Docker
-**/Dockerfile
-**/docker-compose.yml
-**/*.dockerignore
-
-# React build files
-build/
-public/
-*.env
-
-# IDE specific
-.vscode/
-.idea/
-
-# Operating system specific
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Other
-*.log
-*.tmp
-*.swp
-
-# Environment files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Dependencies
-/pipenv.lock
-/.pnp
-.pnp.js
+# React Client
+client/my-app/node_modules/
+client/my-app/build/
+client/my-app/.env
