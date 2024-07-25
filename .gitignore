@@ -1,5 +1,5 @@
 # Python Service
-python-service/venv/
+/venv
 python-service/__pycache__/
 python-service/*.pyc
 python-service/*.pyo
