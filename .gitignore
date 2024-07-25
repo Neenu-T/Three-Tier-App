@@ -1,6 +1,5 @@
 # Python Service
-/venv
-python-service/__pycache__/
+
 python-service/*.pyc
 python-service/*.pyo
 python-service/*.pyd
@@ -12,6 +11,11 @@ node-service/npm-debug.log
 node-service/.env
 
 # React Client
-client/my-app/node_modules/
-client/my-app/build/
-client/my-app/.env
+# client/my-app/node_modules/
+# client/my-app/build/
+# client/my-app/.env
+# General ignores
+venv/
+__pycache__/
+node_modules
+

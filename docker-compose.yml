@@ -1,0 +1,58 @@
+version: '3.9'
+
+services:
+  client:
+    build: ./react-client
+    ports:
+      - "3000:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./react-client:/app
+    stdin_open: true
+    tty: true
+    networks:
+      - mynetwork
+
+  node_service:
+    build: ./node_service
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./node_service:/app
+    environment:
+      - NODE_ENV=development
+    networks:
+      - mynetwork
+
+  python_service:
+    build: ./python-service
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./python-service:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DATABASE_URL=postgresql://postgres:1234567@postgres:5432/fastapi_db
+    networks:
+      - mynetwork
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234567
+      POSTGRES_DB: fastapi_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  postgres_data:
