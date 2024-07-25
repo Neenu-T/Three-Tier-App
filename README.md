@@ -14,6 +14,19 @@ The goal is to have a functional application where the client can interact with 
 - `python-service/`: Contains the Python service with PostgreSQL integration.
 
 ## Setup
+##python
+cd python-service
+uvicorn app.main:app --reload
+##postgreSQL
+DATABASE_URL = "postgresql://postgres:1234567@localhost:5432/fastapi_db"
+##react
+cd react-client
+npm start
+##node.js
+cd node_service
+node index.js
+##docker
+docker-compose up -d
 
 ### Prerequisites
 
