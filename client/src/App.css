@@ -1,0 +1,299 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body and Overall Layout */
+body {
+  background-color: #F5F8FA;
+  color: #060603;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Main App Container */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Header Section */
+.App-header {
+  text-align: center;
+}
+
+/* Button Style */
+button {
+  background-color: #FFF200;
+  border: none;
+  border-radius: 8px;
+  color: #060603;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 24px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #e2e200;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Close Button */
+.close-btn {
+  background: #FF0000;
+  border: none;
+  border-radius: 50%;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Item List */
+.item-list {
+  list-style: none;
+  padding: 0;
+}
+
+.item-list li {
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-list li:nth-child(odd) {
+  background: #F9F9F9;
+}
+
+.item-list button.edit-btn {
+  background: #007BFF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.item-list button.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.item-list button.delete-btn {
+  background: #FF0000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.item-list button.delete-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #FFF200;
+  box-shadow: 0 0 4px rgba(255, 242, 0, 0.5);
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #A0A0A0;
+  font-style: italic;
+}
+
+/* Labels for Form Fields */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+/* List Container */
+.item-list-container {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+}
+
+/* List Header */
+.item-list-header {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #060603;
+}
+
+/* List Items */
+/* Modal */
+.modal {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* Modal Close Button */
+.modal button {
+  background-color: #FF0000;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  margin:30px 45px;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-right:-130px;
+  margin-bottom: -130px;
+}
+
+.modal button:hover {
+  background-color: #cc0000;
+}
+
+/* Modal Header */
+.modal h2 {
+  font-size: 24px;
+  color: #060603;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Input Field */
+.modal input[type="text"] {
+  margin:-5px;
+  
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  font-size: 15px;
+  padding: 15px 20px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.modal input[type="text"]:focus {
+  border-color: #5bba49;
+}
+
+/* Add Item Button */
+.modal button[type="submit"] {
+  background-color: #3dc367;
+  margin:10px 15px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 15px 20px;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.modal button[type="submit"]:hover {
+  background-color: #3bd75d;
+}
+
+/* List */
+.modal ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* List Items */
+.modal ul li {
+  margin-left: 50px;
+  background: #F5F8FA;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 15px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  color: #060603;
+}
