@@ -1,33 +1,52 @@
-# Full-Stack Application
+# 3-Tier Application
 
-A comprehensive full-stack application built using Node.js, Python (FastAPI), and React. This project demonstrates CRUD operations with real-time updates via WebSocket.
+## Overview
 
-## Table of Contents
+This project is a 3-tier application consisting of a Client Side (React),
+Node.js Service, and Python Service with a PostgreSQL database.
+The client application communicates with the Node.js service, which in turn communicates with the Python service to handle data operations. 
+The goal is to have a functional application where the client can interact with a list of elements that updates in real-time.
 
-- [Project Overview](#project-overview)
-- [Technologies Used](#technologies-used)
-- [Setup and Installation](#setup-and-installation)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Running the Application](#running-the-application)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
+## Project Structure
 
-## Project Overview
+- `client/`: Contains the React client application.
+- `node-service/`: Contains the Node.js service.
+- `python-service/`: Contains the Python service with PostgreSQL integration.
 
-This application is a simple CRUD application with real-time updates. It consists of:
+## Setup
+##python
+cd python-service
+uvicorn app.main:app --reload
+##postgreSQL
+DATABASE_URL = "postgresql://postgres:1234567@localhost:5432/fastapi_db"
+##react
+cd react-client
+npm start
+##node.js
+cd node_service
+node index.js
+##docker
+docker-compose up -d
 
-- A **Node.js** service that acts as a backend API and WebSocket server.
-- A **Python (FastAPI)** service for handling data storage and CRUD operations.
-- A **React** front-end client for user interaction.
+### Prerequisites
+
+- Node.js (v21.5.0 or compatible)
+- Python (3.x)
+- PostgreSQL
+- Git
+
+### Installation
+
+1. **Clone the Repository**
+
+   ```bash
+    https://github.com/Neenu-T/Three-tier-App.git
+    cd Three-tier-App
 
 ## Technologies Used
 
 - **Node.js**: Backend API and WebSocket server.
 - **Express**: Web framework for Node.js.
-- **Socket.IO**: Real-time communication.
 - **Python**: Backend data handling with FastAPI.
 - **PostgreSQL**: Database for storing data.
 - **React**: Front-end user interface.
@@ -44,5 +63,5 @@ This application is a simple CRUD application with real-time updates. It consist
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>"# Three-tier-App" 
+   https://github.com/Neenu-T/Three-tier-App.git
+   cd Three-tier-App
