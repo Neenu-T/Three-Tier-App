@@ -34,7 +34,6 @@ The goal is to have a functional application where the client can interact with 
 
 - **Node.js**: Backend API and WebSocket server.
 - **Express**: Web framework for Node.js.
-- **Socket.IO**: Real-time communication.
 - **Python**: Backend data handling with FastAPI.
 - **PostgreSQL**: Database for storing data.
 - **React**: Front-end user interface.
@@ -51,5 +50,5 @@ The goal is to have a functional application where the client can interact with 
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>"# Three-tier-App" 
+   https://github.com/Neenu-T/Three-tier-App.git
+   cd Three-tier-App" 
