@@ -6,9 +6,11 @@ services:
     ports:
       - "3000:3000"
     environment:
+      - BACKEND_URL=http://node_service:3001
       - CHOKIDAR_USEPOLLING=true
     volumes:
-      - ./client:/app
+      - './client:/app'
+      - '/app/node_modules'
     stdin_open: true
     tty: true
     networks:
@@ -22,6 +24,7 @@ services:
       - ./node_service:/app
     environment:
       - NODE_ENV=development
+      - PYTHON_BASE_URL=http://python_service:80
     networks:
       - mynetwork
 

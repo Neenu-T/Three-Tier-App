@@ -2,17 +2,13 @@ const express = require('express');
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const http = require('http');
-
 const app = express();
-const server = http.createServer(app);
 const port = 3001;
 
 app.use(cors());
 app.use(bodyParser.json());
 
-const PYTHON_SERVICE_URL = 'http://localhost:8000';
-
+const PYTHON_SERVICE_URL = process.env.PYTHON_BASE_URL || 'http://localhost:8000';
 app.get('/items', async (req, res) => {
     try {
         const response = await axios.get(`${PYTHON_SERVICE_URL}/items/`);
@@ -31,6 +27,6 @@ app.post('/items', async (req, res) => {
     }
 });
 
-server.listen(port, () => {
-    console.log(`Node.js service running at http://localhost:${port}`);
+app.listen(port, () => {
+    console.log(`Node.js service running at :${port}`);
 });

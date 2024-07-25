@@ -30,24 +30,36 @@ const ItemModel: React.FC<ItemModelProps> = ({ closeModal, items, onAddItem }) =
 
     return (
         <div className="modal">
-            <button onClick={closeModal}>Close</button>
-            
-            <form onSubmit={handleAddItem}>
-                <input
-                    type="text"
-                    value={newItemName}
-                    onChange={(e) => setNewItemName(e.target.value)}
-                    placeholder="New item name"
-                />
-                <button type="submit">Add Item</button>
-            </form>
-            <ul>
-                {items.map((item) => (
-                    <li key={item.id}>{item.name}</li>
-                ))}
-            </ul>
+            <div className="modal-content">
+                <button className="close-btn" onClick={closeModal}>×</button>
+                <h2>List Elements</h2>
+                <form onSubmit={handleAddItem}>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            value={newItemName}
+                            onChange={(e) => setNewItemName(e.target.value)}
+                            placeholder="Add new item"
+                        />
+                        <button type="submit">Add</button>
+                    </div>
+                </form>
+                <ul className="item-list">
+                    {items?.map((item) => (
+                        <li key={item.id}>
+                            <div className="item-content">{item.name}</div>
+                            <div className="item-actions">
+                                {/* Add edit and delete buttons here if needed */}
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 };
 
 export default ItemModel;
+
+
+

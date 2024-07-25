@@ -2,17 +2,29 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import ItemModel from './Components/ItemModel';
 
+
+const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001'
 const App: React.FC = () => {
     const [items, setItems] = useState<any[]>([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
+    const fetchItems = async () => {
+        
+        try{
+            console.log(BACKEND_URL,"checking update")
+            const response = await fetch(`${BACKEND_URL}/items`);
+            const data = await response.json();
+            setItems(data || []);
+            
+           
+        } catch(err) {
+            console.log("Error Fetching Item : ", err);
+            
+        }
+    };
+
     useEffect(() => {
         // Fetch initial items
-        const fetchItems = async () => {
-            const response = await fetch('http://localhost:3001/items');
-            const data = await response.json();
-            setItems(data);
-        };
         fetchItems();
     }, []);
 
