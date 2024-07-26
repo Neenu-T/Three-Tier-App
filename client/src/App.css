@@ -75,12 +75,12 @@ button:focus {
 
 /* Close Button */
 .close-btn {
-  background: #FF0000;
+  background: #210f0f;
   border: none;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   color: #FFFFFF;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 10px;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -93,7 +93,7 @@ button:focus {
 }
 
 .close-btn:hover {
-  background-color: #cc0000;
+  background-color: #0b0a0a;
 }
 
 /* Input and Button Layout */

@@ -31,7 +31,7 @@ const ItemModel: React.FC<ItemModelProps> = ({ closeModal, items, onAddItem }) =
     return (
         <div className="modal">
             <div className="modal-content">
-                <button className="close-btn" onClick={closeModal}>×</button>
+                <button className="close-btn" onClick={closeModal}>Close</button>
                 <h2>List Elements</h2>
                 <form onSubmit={handleAddItem}>
                     <div className="form-group">

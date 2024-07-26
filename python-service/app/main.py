@@ -1,8 +1,7 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
-
-from .database import engine, get_db, Base  # Import Base here
+from .database import engine, get_db, Base
 from .models import Item
 from pydantic import BaseModel
 
@@ -19,7 +18,7 @@ class ItemResponse(BaseModel):
     name: str
 
     class Config:
-        from_attributes = True  # Update for Pydantic v2
+        from_attributes = True
 
 @app.post("/items/", response_model=ItemResponse)
 def create_item(item: ItemCreate, db: Session = Depends(get_db)):

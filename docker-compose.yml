@@ -4,7 +4,7 @@ services:
   client:
     build: ./client
     ports:
-      - "3000:3000"
+      - "80:80"
     environment:
       - BACKEND_URL=http://node_service:3001
       - CHOKIDAR_USEPOLLING=true
@@ -56,6 +56,5 @@ services:
 networks:
   mynetwork:
     driver: bridge
-
 volumes:
   postgres_data:
